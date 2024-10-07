@@ -1,0 +1,5 @@
+pre {
+    padding: 10px;
+    background-color: var(--bs-light-bg-subtle);
+    border: 1px dotted var(--bs-secondary-bg-subtle);
+}

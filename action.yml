@@ -1,0 +1,27 @@
+name: 'Arkadia - Docs'
+description: 'Generates docs for Arkadia Skrypty'
+author: Delwing
+branding:
+  icon: check-square
+  color: blue
+inputs:
+  docs-file:
+    description: 'Path to docs'
+    required: true
+  xml-file:
+    description: 'Path to Mudlet XML'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: './page'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
