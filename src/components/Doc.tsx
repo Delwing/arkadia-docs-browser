@@ -18,13 +18,13 @@ function Docs({doc}: { doc: Doc }) {
     return (
         <div className={'mt-4'} id={doc.alias}>
             <div>
-                <h4 className="ps-1 pb-1 border-bottom font-monospace" onMouseOver={() => setHover(true)}
+                <h5 className="ps-1 pb-1 border-bottom font-monospace" onMouseOver={() => setHover(true)}
                     onMouseOut={() => setHover(false)}>
                     {doc.alias}
                     <a className={'ms-2 link-light' + (hover ? '' : ' invisible')} style={{left: '-40px'}}
                        href={`#${doc.alias}`}><Link/>
                     </a>
-                </h4>
+                </h5>
             </div>
             <div className={'p-1'}>
                 <p dangerouslySetInnerHTML={{__html: new Converter({}).makeHtml(doc.description.join("\n"))}}></p>
