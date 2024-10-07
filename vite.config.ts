@@ -6,6 +6,7 @@ import parseDocs from "./src/build/parse-docs"
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '',
   plugins: [react(), parseDocs()],
   resolve: {
     alias: {
