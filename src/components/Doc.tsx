@@ -9,12 +9,6 @@ function Docs({doc}: { doc: Doc }) {
     const [match, setMatch] = useState(false)
     const [hover, setHover] = useState(false)
 
-    const matches = doc.matches.map(match => (
-        <li key={match.key} className={'list-group'}>
-            <span className={'small font-monospace bg-secondary-subtle p-1'}>{match.regex}</span>
-        </li>
-    ))
-
     return (
         <div className={'mt-4'} id={doc.alias}>
             <div>
@@ -28,13 +22,13 @@ function Docs({doc}: { doc: Doc }) {
             </div>
             <div className={'p-1'}>
                 <p dangerouslySetInnerHTML={{__html: new Converter({}).makeHtml(doc.description.join("\n"))}}></p>
-                <div>
-                    <h6>Regexps:</h6>
-                    <ul className={'list-group-flush'}>
-                        {matches}
-                    </ul>
+                <div className={'d-flex justify-content-start align-items-baseline'}>
+                        Regex:
+                        <code className={'ms-2'}>
+                            {doc.matches[0].regex}
+                        </code>
                 </div>
-                <Form className={'ms-1 mt-4'}>
+                <Form className={'mt-2'}>
                     <InputGroup className="mb-3 input-group-sm">
                         <InputGroup.Text>Przetestuj</InputGroup.Text>
                         <Form.Control type="text" placeholder=""

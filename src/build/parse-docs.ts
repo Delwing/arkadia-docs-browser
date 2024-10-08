@@ -3,6 +3,11 @@ import {XMLParser} from "fast-xml-parser"
 import * as fs from "fs"
 import {Doc} from "../model/documentation.ts";
 import {Alias, Mudlet} from "../model/mudlet.ts";
+import assert from "node:assert"
+
+assert(process.env.DOCS_FILE, "Environmental variable DOCS_FILE must be provided.")
+assert(process.env.DOCS_FILE, "Environmental variable XML_FILE must be provided.")
+
 
 function collectRegexes(aliasPackage: Alias[] | undefined, prefix: string): Alias[] {
     const result: Alias[] = [];
@@ -25,7 +30,7 @@ function collectDocs(): Doc[] {
     for (let index = 0; index < docs.length; index++) {
         const element = docs[index];
         if (element.startsWith("##")) {
-            currentElement = {alias: element.substring(2).trim().replace(/`(.+)`/, "$1"), description: [], matches: []}
+            currentElement = {alias: element.substring(2).trim().replace(new RegExp(/`(.+?)`/g), "$1"), description: [], matches: []}
             result.push(currentElement)
         } else {
             currentElement.description.push(element)
@@ -48,7 +53,7 @@ export default function parseDocs(): Plugin {
 
             const docs = collectDocs();
 
-            docs.map(item => item.matches = flat.filter(alias => new RegExp(alias.regex).test(item.alias)))
+            docs.map(item => item.matches = flat.filter(alias => new RegExp(alias.regex).test(item.alias.split(",")[0].trim())))
             fs.writeFileSync('docs.json', JSON.stringify(docs))
 
             const keysWithHelp = docs.flatMap(doc => doc.matches.map(match => match.key))
