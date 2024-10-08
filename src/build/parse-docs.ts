@@ -3,6 +3,7 @@ import {XMLParser} from "fast-xml-parser"
 import * as fs from "fs"
 import {Doc} from "../model/documentation.ts";
 import {Alias, Mudlet} from "../model/mudlet.ts";
+import { getInput } from "@actions/core"
 
 
 function collectRegexes(aliasPackage: Alias[] | undefined, prefix: string): Alias[] {
@@ -20,7 +21,7 @@ function collectRegexes(aliasPackage: Alias[] | undefined, prefix: string): Alia
 }
 
 function collectDocs(): Doc[] {
-    const docs = fs.readFileSync("./data/aliases.md").toString().split("\n").map(item => item.trim()).filter(item => item != '')
+    const docs = fs.readFileSync(getInput('docs-file')).toString().split("\n").map(item => item.trim()).filter(item => item != '')
     const result: Doc[] = [];
     let currentElement: Doc = {alias: '', description: [], matches: []};
     for (let index = 0; index < docs.length; index++) {
@@ -41,7 +42,7 @@ export default function parseDocs(): Plugin {
         name: 'parse-docs',
         buildStart() {
             const parser = new XMLParser();
-            const mudletXml = fs.readFileSync("./data/Arkadia.xml").toString().trim()
+            const mudletXml = fs.readFileSync(getInput('xml-file')).toString().trim()
             const result: Mudlet = parser.parse(mudletXml, true);
 
             const aliases = result.MudletPackage.AliasPackage.AliasGroup
