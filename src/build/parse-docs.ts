@@ -5,6 +5,9 @@ import {Doc} from "../model/documentation.ts";
 import {Alias, Mudlet} from "../model/mudlet.ts";
 import { getInput } from "@actions/core"
 
+console.log(`Docs -> ${getInput('docs-file')}`)
+console.log(`XML -> ${getInput('xml-file')}`)
+
 
 function collectRegexes(aliasPackage: Alias[] | undefined, prefix: string): Alias[] {
     const result: Alias[] = [];
