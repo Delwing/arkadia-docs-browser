@@ -17,6 +17,9 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
     - run: yarn install && yarn build
+      env:
+        DOCS_FILE: ${{ inputs.docs-file }}
+        XML_FILE: ${{ inputs.xml-file }}
       shell: bash
     - name: Setup Pages
       uses: actions/configure-pages@v5
