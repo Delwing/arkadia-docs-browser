@@ -23,4 +23,3 @@ jobs:
         with:
           docs-file: "data/aliases.md"
           xml-file: "data/Arkadia.xml"
-      - run: ls ../../_actions/actions
