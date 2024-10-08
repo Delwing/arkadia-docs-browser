@@ -14,8 +14,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Checkout
-      uses: actions/checkout@v4
     - run: ls
       shell: bash
     - run: yarn install && yarn build
