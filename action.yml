@@ -14,12 +14,12 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: ls
-      shell: bash
     - run: yarn install && yarn build
       env:
         DOCS_FILE: ${{ inputs.docs-file }}
         XML_FILE: ${{ inputs.xml-file }}
+      shell: bash
+    - run: ls ../../_actions
       shell: bash
     - name: Setup Pages
       uses: actions/configure-pages@v5
