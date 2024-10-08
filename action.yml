@@ -19,8 +19,6 @@ runs:
         DOCS_FILE: ${{ inputs.docs-file }}
         XML_FILE: ${{ inputs.xml-file }}
       shell: bash
-    - run: ls ../../_actions
-      shell: bash
     - name: Setup Pages
       uses: actions/configure-pages@v5
     - name: Upload artifact
