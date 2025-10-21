@@ -25,7 +25,7 @@ function Docs({doc}: { doc: Doc }) {
                 <div className={'d-flex justify-content-start align-items-baseline'}>
                         Regex:
                         <code className={'ms-2'}>
-                            {doc.matches[0].regex}
+                            {doc.matches[0] && doc.matches[0].regex}
                         </code>
                 </div>
                 <Form className={'mt-2'}>

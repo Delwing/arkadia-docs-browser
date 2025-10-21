@@ -6,7 +6,7 @@ import {Alias, Mudlet} from "../model/mudlet.ts";
 import assert from "node:assert"
 
 assert(process.env.DOCS_FILE, "Environmental variable DOCS_FILE must be provided.")
-assert(process.env.DOCS_FILE, "Environmental variable XML_FILE must be provided.")
+assert(process.env.XML_FILE, "Environmental variable XML_FILE must be provided.")
 
 
 function collectRegexes(aliasPackage: Alias[] | undefined, prefix: string): Alias[] {
