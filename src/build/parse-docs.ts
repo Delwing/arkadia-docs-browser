@@ -53,7 +53,32 @@ export default function parseDocs(): Plugin {
 
             const docs = collectDocs();
 
-            docs.map(item => item.matches = flat.filter(alias => new RegExp(alias.regex).test(item.alias.split(",")[0].trim())))
+            docs.map(item => item.matches = flat.filter(alias => {
+                const regex = new RegExp(alias.regex)
+                    return regex.test(item.alias.split(",")[0].trim()
+                            .replace(/<ID>/g, "1")
+                            .replace(/<opóźnienie>/g, "1")
+                            .replace(/<lista>/g, "1,2")
+                            .replace(/<lista>/g, "1,2")
+                            .replace(/<komendy>/g, "1#2")
+                            .replace(/<kategoria>/g, "man")
+                            .replace(/<opis>/g, "a")
+                            .replace(/\[<.*?>]/g, "")
+                            .replace(/[<.*?>]/g, "1"))
+                        ||
+                        regex.test(item.alias.split(",")[0].trim()
+                            .replace(/<ID>/g, "1")
+                            .replace(/<opóźnienie>/g, "1")
+                            .replace(/<lista>/g, "1,2")
+                            .replace(/<lista>/g, "1,2")
+                            .replace(/<komendy>/g, "1#2")
+                            .replace(/<kategoria>/g, "man")
+                            .replace(/<opis>/g, "a")
+                            .replace(/\[<.*?>]/g, "")
+                            .replace(/[<.*?>]/g, "A")
+
+                );
+            }))
             fs.writeFileSync('docs.json', JSON.stringify(docs))
 
             const keysWithHelp = docs.flatMap(doc => doc.matches.map(match => match.key))

@@ -602,4 +602,797 @@ Resetuje zapisane bindy ofensywne do wartości domyślnych.
 Otwiera okno z listą ostatnio przedstawionych oraz zapamiętanych postaci, umożliwiając szybkie zapisywanie imion.
 
 ## `/med`, `/medytuj`
-Medytacja oraz ocena wszystkich cech.
+
+Uruchamia sekwencję medytacji oraz ocenę podstawowych cech postaci.
+
+## `/zde`
+
+Automatycznie zdenominuje posiadane monety i odłoży je z powrotem do sakiewki.
+
+## `/stat`
+
+Wyświetla statystyki walki (ciosy, parowania itp.) zbierane przez moduł skryptów.
+
+## `/stat2`
+
+Pokazuje alternatywny układ raportu statystyk walki.
+
+## `/stat_log <tryb>`
+
+Ustawia poziom szczegółowości zapisu statystyk (0 – wyłączone, 1 – skrót, 2 – pełny).
+
+## `/stat_reset`
+
+Resetuje zebrane statystyki walki do zera.
+
+## `/ocenkamienie`
+
+Wycenia posiadane kamienie szlachetne według znanych wartości.
+
+## `um`, `umiejetnosci[ <kategoria>]`
+
+Wyświetla listę umiejętności, opcjonalnie ograniczając ją do wskazanej kategorii.
+
+## `jezyki`
+
+Prezentuje poziomy znajomości języków postaci.
+
+## `/eksploruj`
+
+Przełącza tryb eksploracji, który podkreśla nowe lokacje podczas wędrówki.
+
+## `/kolory`
+
+Wyświetla listę dostępnych nazw kolorów Mudleta.
+
+## `/expstart`
+
+Resetuje licznik czasu doświadczenia, rozpoczynając nowe pomiary tempa expienia.
+
+## `/porownaj_ze_wszystkimi`
+
+Porównuje statystyki z wszystkimi przeciwnikami w kolejce modułu walki.
+
+## `/chat`
+
+Otwiera okno czatu skryptów Arkadii.
+
+## `/licz_poziom`
+
+Uruchamia kalkulator poziomu, wyliczający postęp na podstawie aktualnych danych.
+
+## `/cechy`
+
+Wyświetla zestawienie cech wykorzystywane przez kalkulator poziomu.
+
+## `/wyc`, `/wycinaj`
+
+Rozpoczyna automatyczne wycinanie trofeów z martwych ciał według aktualnych ustawień.
+
+## `/wyc <ID>`
+
+Wycina trofea z konkretnego ciała wskazanego numerem.
+
+## `/wyr`, `/wyrywaj`
+
+Uruchamia procedurę wyrywania pazurów, kłów i podobnych elementów z zabitych stworzeń.
+
+## `/wyr <ID>`
+
+Wyrywa trofea z ciała o podanym numerze.
+
+## `/postepy`
+
+Pokazuje licznik postępów zdobytych w bieżącej sesji.
+
+## `/postepy2`
+
+Wyświetla globalny licznik postępów wraz z dodatkowymi szczegółami.
+
+## `/postepy3`
+
+Prezentuje miesięczne i roczne podsumowanie postępów.
+
+## `/postepy_reset`
+
+Resetuje licznik postępów z bieżącej sesji.
+
+## `/postepy2_reset`
+
+Czyści globalny licznik postępów.
+
+## `/postepy2+`
+
+Dodaje jeden postęp do globalnego licznika `postepy2`.
+
+## `/postepy2+ <liczba>`
+
+Dodaje naraz wskazaną (maksymalnie 15) liczbę postępów do globalnego licznika.
+
+## `/postepy2+ <ID> <liczba>`
+
+Zwiększa o podaną wartość wpis w globalnym liczniku oznaczony wskazanym identyfikatorem.
+
+## `/postepy2- <ID>`
+
+Usuwa z globalnego licznika wpis o podanym identyfikatorze.
+
+## `/postepy2- <ID> <liczba>`
+
+Odejmuje określoną liczbę postępów od wpisu o wskazanym identyfikatorze.
+
+## `/postepy2_off`
+
+Wyłącza automatyczne dopisywanie do globalnego licznika postępów.
+
+## `/postepy2_on`
+
+Włącza ponownie automatyczne dopisywanie do globalnego licznika postępów.
+
+## `/zabici`
+
+Pokazuje licznik zabitych przeciwników z bieżącej sesji.
+
+## `/zabici_reset`
+
+Resetuje licznik zabitych dla bieżącej sesji.
+
+## `/zabici2`
+
+Wyświetla globalny licznik zabitych od ostatniego resetu.
+
+## `/zabici2!`
+
+Pokazuje globalny licznik zabitych z podsumowaniem dziennym.
+
+## `/zabici2 <data>`
+
+Wyświetla log zabitych dla wskazanej daty (`rok/miesiąc/dzień`, `rok/miesiąc` lub `rok`).
+
+## `/zabici2_reset`
+
+Resetuje globalny licznik zabitych.
+
+## `/oceniaj`
+
+Ocenia sprzęt i potencjalne zagrożenie dla wykrytych wrogów.
+
+## `/oceniaj!`
+
+Wymusza ocenę wszystkich znajdujących się w zasięgu postaci.
+
+## `wiedza`
+
+Wyświetla statystyki wiedzy (książki, biblioteki) zapisane przez skrypty.
+
+## `/wiedza`
+
+Pokazuje pomoc dotyczącą modułu wiedzy i dostępnych poleceń.
+
+## `/ksiazki`
+
+Wypisuje listę znanych ksiąg wraz z postępami czytania.
+
+## `/ksiazki!`
+
+Pokazuje wszystkie książki, w tym ukryte lub rzadkie pozycje.
+
+## `/biblioteki`
+
+Wyświetla spis odwiedzonych bibliotek.
+
+## `/biblioteki!`
+
+Wypisuje pełną listę bibliotek wraz z dodatkowymi informacjami.
+
+## `/abeep <poziom>`
+
+Ustawia poziom powiadomień dźwiękowych ostrzegających o ataku (0–2).
+
+## `/beep`
+
+Testuje sygnał dźwiękowy ostrzegający o ataku.
+
+## `/aktualizuj_skrypty`
+
+Aktualizuje pakiet skryptów do najnowszego wydania ze zdalnego repozytorium.
+
+## `/zainstaluj <repo> [<gałąź>]`
+
+Instaluje lub aktualizuje skrypty z podanego repozytorium i opcjonalnie gałęzi.
+
+## `/pobierz_mape`
+
+Pobiera aktualną wersję mapy dla mappera.
+
+## `/pobierz_mape <login> <klucz>`
+
+Pobiera mapę przy użyciu podanego loginu i klucza dostępowego.
+
+## `/zaladuj_mape`
+
+Wczytuje mapę z pliku do mappera.
+
+## `/zapisz_mape`
+
+Zapisuje bieżący stan mapy na dysku.
+
+## `/pobierz_baze`
+
+Pobiera aktualną bazę osób wykorzystywaną przez moduł `people`.
+
+## `/ui_restart`
+
+Restartuje interfejs użytkownika skryptów (okna, belki itp.).
+
+## `/ui`
+
+Otwiera pomoc interfejsu graficznego, opisując komendy `/ui_restart` i `/kondycje` oraz wskazówki dotyczące odświeżania okien.
+
+## `/kondycje`
+
+Otwiera okno kondycji (stan zdrowia) interfejsu.
+
+## `/ikona <tekst>`
+
+Generuje i ustawia ikonę profilu Mudleta z podanym podpisem.
+
+## `/mode6 [<wariant>]`
+
+Wyświetla pomoc i przykładowe konfiguracje dla szóstego trybu stopki UI; podanie numeru prezentuje konkretny układ.
+
+## `/zainstaluj_plugin <url>`
+
+Instaluje plugin Mudleta z podanego adresu ZIP.
+
+## `/odinstaluj_plugin <nazwa>`
+
+Usuwa zainstalowany plugin o wskazanej nazwie.
+
+## `/plugins`
+
+Pokazuje listę zainstalowanych pluginów oraz pomoc dotyczącą modułu pluginów.
+
+## `/list`
+
+Otwiera kreator listów w trybie interaktywnym.
+
+## `/list <adresat> <temat>`
+
+Uruchamia kreator listu z wypełnionym adresem i tematem do szybkiego wysłania.
+
+## `/mbind <slot> <polecenia>`
+
+Przypisuje sekwencję poleceń do wskazanego slotu multibinda w bieżącej lokacji.
+
+## `/mbind+ <polecenia>`
+
+Dodaje kolejną akcję multibinda do pierwszego wolnego slotu w bieżącej lokacji.
+
+## `/mbind <lokacja>`
+
+Wyświetla multibindy zapisane dla lokacji o podanym numerze.
+
+## `/mbind-`
+
+Usuwa wszystkie multibindy przypisane do bieżącej lokacji.
+
+## `/mbind- <slot>`
+
+Kasuje multibind z konkretnego slotu w bieżącej lokacji.
+
+## `/mbind`
+
+Pokazuje multibindy przypisane do aktualnej lokacji.
+
+## `/pokaz_opcje`
+
+Wypisuje aktualne ustawienia mappera.
+
+## `/ustaw_opcje <klucz> <wartość>`
+
+Zmienia wskazaną opcję konfiguracyjną mappera.
+
+## `/spe_lok <wyjście> <opis>`
+
+Dodaje specjalne wyjście prowadzące z bieżącej lokacji do opisanej lokacji.
+
+## `/spe <wyjście> <opis>`
+
+Tworzy specjalne wyjście z aktualnej lokacji do miejsca opisanego tekstem.
+
+## `/ex <kierunek> <cel>`
+
+Dodaje standardowe wyjście z bieżącej lokacji w wybranym kierunku.
+
+## `/exf <źródło> <kierunek> <cel>`
+
+Tworzy wyjście między dwoma lokacjami, wskazując ich identyfikatory i kierunek.
+
+## `/kolor <kolor>`
+
+Koloruje bieżącą lokację na mapie wybranym kolorem.
+
+## `/zmien_obszar <obszar>`
+
+Przenosi lokację do innego obszaru mappera.
+
+## `/dodaj_lok <warstwa> <pozycja>`
+
+Dodaje nową lokację na wskazanej warstwie mapy i pozycji.
+
+## `/dodaj_lok <pozycja>`
+
+Dodaje lokację korzystając z domyślnej warstwy, wskazując jedynie pozycję.
+
+## `/usun_stuby [<limit>]`
+
+Usuwa niepołączone stuby mapy, opcjonalnie ograniczając operację do określonej liczby pokoi.
+
+## `/wodopoj`
+
+Oznacza bieżącą lokację jako miejsce, w którym można uzupełnić wodę.
+
+## `/waga <wartość>`
+
+Nadaje bieżącej lokacji wagę używaną przez wyznaczanie ścieżek.
+
+## `/waga <lokacja> <wartość>`
+
+Ustawia wagę wskazanej lokacji na mapie.
+
+## `/kbind <kierunek> <polecenia>`
+
+Przypisuje własną komendę do klawisza kierunku na mapie.
+
+## `/kbind_reset`
+
+Przywraca domyślne komendy dla klawiszy kierunkowych mappera.
+
+## `/brama [<nazwa>]`
+
+Oznacza lokację jako bramę (opcjonalnie z nazwą) do szybkiego odnajdywania.
+
+## `/mm <obszar>`
+
+Rysuje mapę wskazanego obszaru w osobnym oknie.
+
+## `/zlok`
+
+Namierza postać na mapie i przesuwa widok na bieżącą lokację.
+
+## `/lok`
+
+Wyświetla informacje o aktualnej lokacji mappera.
+
+## `/lok <ID>`
+
+Pokazuje szczegóły lokacji o wskazanym identyfikatorze.
+
+## `/ustaw <ID>`
+
+Ustawia bieżącą pozycję mappera na konkretną lokację.
+
+## `/idz <skrót>`
+
+Rozpoczyna automatyczne dojście do ścieżki zapisanej pod skrótem.
+
+## `/idz <skrót> <opóźnienie>`
+
+Uruchamia drogę do skrótu po odczekaniu wskazanego czasu (sekundy).
+
+## `/idz <ID>`
+
+Wyznacza ścieżkę do lokacji o podanym ID.
+
+## `/idz <ID> <opóźnienie>`
+
+Planowo rozpoczyna marsz do lokacji po upływie określonego czasu.
+
+## `/dalej`
+
+Kontynuuje wykonywanie wcześniej przygotowanej ścieżki.
+
+## `/dalej <opóźnienie>`
+
+Wznawia marsz po odczekaniu zadanej liczby sekund.
+
+## `/pokaz_sciezke <ID>`
+
+Podświetla trasę do wskazanej lokacji na mapie.
+
+## `/pokaz_skroty`
+
+Wypisuje listę zdefiniowanych skrótów tras w mapperze.
+
+## `/dodaj_skrot <ID> <nazwa> <komendy>`
+
+Dodaje nowy skrót prowadzący do lokacji wraz z sekwencją komend.
+
+## `/usun_skrot <nazwa>`
+
+Usuwa pojedynczy skrót po jego nazwie.
+
+## `/usun_skroty`
+
+Kasuje wszystkie zapisane skróty.
+
+## `/dodaj_obszar <nazwa>`
+
+Tworzy nowy obszar w bazie mapy.
+
+## `/pokaz_obszary`
+
+Wypisuje listę znanych obszarów.
+
+## `/stop`
+
+Zatrzymuje automatycznego chodzika.
+
+## `/opoz <czas>`
+
+Ustawia opóźnienie między krokami automatycznego chodzika.
+
+## `/chodzik`
+
+Wyświetla status automatycznego chodzika.
+
+## `/szybciej`
+
+Skraca czas między krokami chodzika.
+
+## `/wolniej`
+
+Wydłuża czas między krokami chodzika.
+
+## `/chodzik wlacz`
+
+Włącza automatycznego chodzika w aktualnej lokacji.
+
+## `/chodzik wylacz`
+
+Wyłącza automatycznego chodzika.
+
+## `/pre_walk <komendy>`
+
+Ustawia komendy wykonywane przed każdym krokiem automatycznego chodzenia.
+
+## `/pre_walk! <komendy>`
+
+Trwale zapisuje komendy wykonywane przed krokiem, zachowując je między sesjami.
+
+## `/post_walk <komendy>`
+
+Ustala komendy wykonywane po każdym kroku chodzika.
+
+## `/post_walk! <komendy>`
+
+Trwale zapisuje komendy wykonywane po kroku.
+
+## `/pwalk-`
+
+Czyści tymczasowe komendy `pre/post walk` ustawione na bieżącą sesję.
+
+## `/pwalk!-`
+
+Usuwa zapisane na stałe komendy `pre/post walk`.
+
+## `/pwalk!!-`
+
+Kasuje całą konfigurację komend związanych z automatycznym chodzeniem.
+
+## `w`, `west`, `zachod`
+
+Wykonuje ruch na zachód, korzystając z mappera.
+
+## `w!`
+
+Wymusza ruch na zachód, ignorując blokady.
+
+## `w!!`
+
+Powtarza wymuszony ruch na zachód z dodatkowym potwierdzeniem.
+
+## `przemknij w`, `przemknij sie w`, `przemknij z druzyna w`
+
+Próbuje przemknąć na zachód (samodzielnie lub z drużyną) według danych mappera.
+
+## `e`, `east`, `wschod`
+
+Wykonuje ruch na wschód przez mapper.
+
+## `e!`
+
+Wymusza ruch na wschód, pomijając blokady.
+
+## `e!!`
+
+Potwierdza drugi poziom wymuszonego ruchu na wschód.
+
+## `przemknij e`
+
+Przemknij na wschód samodzielnie lub z drużyną.
+
+## `n`, `north`, `polnoc`
+
+Przemieszcza postać na północ korzystając z mappera.
+
+## `n!`
+
+Wymusza ruch na północ.
+
+## `n!!`
+
+Wymusza ruch na północ z dodatkowym potwierdzeniem.
+
+## `przemknij n`
+
+Przemknij na północ (solo lub z drużyną) według mapy.
+
+## `s`, `south`, `poludnie`
+
+Wykonuje ruch na południe przez mapper.
+
+## `s!`
+
+Wymusza ruch na południe.
+
+## `s!!`
+
+Powtarza wymuszony ruch na południe z dodatkowym potwierdzeniem.
+
+## `przemknij s`
+
+Przemknij na południe, samodzielnie lub z drużyną.
+
+## `sw`, `poludniowy-zachod`
+
+Przemieszcza na południowy zachód.
+
+## `sw!`
+
+Wymusza ruch na południowy zachód.
+
+## `sw!!`
+
+Powtarza wymuszony ruch na południowy zachód.
+
+## `przemknij sw`
+
+Próbuje przemknąć na południowy zachód (również z drużyną).
+
+## `se`, `poludniowy-wschod`
+
+Kieruje postać na południowy wschód.
+
+## `se!`
+
+Wymusza ruch na południowy wschód.
+
+## `se!!`
+
+Potwierdza wymuszony ruch na południowy wschód.
+
+## `przemknij se`
+
+Przemknij na południowy wschód, opcjonalnie z drużyną.
+
+## `nw`, `polnocny-zachod`
+
+Kieruje postać na północny zachód.
+
+## `nw!`
+
+Wymusza ruch na północny zachód.
+
+## `nw!!`
+
+Powtarza wymuszony ruch na północny zachód.
+
+## `przemknij nw`
+
+Próbuje przemknąć na północny zachód.
+
+## `ne`, `polnocny-wschod`
+
+Przemieszcza postać na północny wschód.
+
+## `ne!`
+
+Wymusza ruch na północny wschód.
+
+## `ne!!`
+
+Potwierdza wymuszony ruch na północny wschód.
+
+## `przemknij ne`
+
+Przemknij na północny wschód (także z drużyną).
+
+## `u`, `up`, `gora`
+
+Wspina postać na wyższy poziom.
+
+## `u!`
+
+Wymusza wejście na wyższy poziom.
+
+## `u!!`
+
+Powtarza wymuszony ruch ku górze.
+
+## `przemknij u`
+
+Przemknij na wyższy poziom (sam lub z drużyną).
+
+## `d`, `down`, `dol`
+
+Schodzi na niższy poziom.
+
+## `d!`
+
+Wymusza zejście na niższy poziom.
+
+## `d!!`
+
+Powtarza wymuszony ruch w dół.
+
+## `przemknij d`
+
+Przemknij na niższy poziom (również z drużyną).
+
+## `/lok_nazwa <nazwa>`
+
+Ustawia nazwę bieżącej lokacji na mapie.
+
+## `/lok_nazwa_id <ID> <nazwa>`
+
+Nadaje nazwę wskazanej lokacji.
+
+## `/lok_opis <opis>`
+
+Zapisuje opis bieżącej lokacji.
+
+## `/lok_opis_id <ID> <opis>`
+
+Ustawia opis lokacji o podanym ID.
+
+## `/lok_notka <notatka>`
+
+Dodaje notatkę do bieżącej lokacji.
+
+## `/lok_notka_id <ID> <notatka>`
+
+Wpisuje notatkę przy lokacji o konkretnym ID.
+
+## `/lok_notka- [<ID>]`
+
+Usuwa notatkę z bieżącej lokacji lub wskazanego pokoju.
+
+## `/pmap <wzorzec>`, `/przeszukaj_mape <wzorzec>`
+
+Wyszukuje lokacje pasujące do wzorca w bazie mapy.
+
+## `/pmap! <wzorzec>`, `/przeszukaj_mape! <wzorzec>`
+
+Wyszukuje lokacje w całej bazie, ignorując filtrowanie obszaru.
+
+## `/pokazuj_notki`
+
+Przełącza wyświetlanie notatek lokacji na mapie.
+
+## `/mapper_db`
+
+Wyświetla pomoc dotyczącą bazy danych mappera.
+
+## `/lok_bind <komendy>`
+
+Przypisuje sekwencję komend wykonywanych przy wejściu do bieżącej lokacji.
+
+## `/lok_bind_id <ID> <komendy>`
+
+Ustawia komendy dla lokacji o wskazanym numerze.
+
+## `/lok_bind- [<ID>]`
+
+Usuwa komendy przypisane do bieżącej lub wskazanej lokacji.
+
+## `/pokazuj_bindy`
+
+Przełącza wyświetlanie przypisanych bindów lokacji.
+
+## `/lok_team_fo <komendy>`
+
+Ustawia komendy podążania drużyny z bieżącej lokacji, używając składni `tekst#komenda`.
+
+## `/lok_team_fo_id <ID> <komendy>`
+
+Przypisuje komendy podążania do wskazanej lokacji.
+
+## `/lok_team_fo- [<ID>]`
+
+Usuwa zapisane komendy podążania dla bieżącej lub wskazanej lokacji.
+
+## `/dodaj_gps <opis>`
+
+Dodaje punkt GPS opisujący bieżącą lokację.
+
+## `/dodaj_gps_obszar <obszar>`
+
+Dodaje punkt GPS powiązany z wybranym obszarem.
+
+## `/dodaj_gps_lokacje <lista> <opis>`
+
+Tworzy punkt GPS obejmujący wiele lokacji (lista ID rozdzielona przecinkami).
+
+## `/usun_gps <ID>`
+
+Usuwa zapisany punkt GPS.
+
+## `/gps`
+
+Wyświetla listę punktów GPS.
+
+## `/gps <ID>`
+
+Pokazuje szczegóły punktu GPS o wskazanym numerze.
+
+## `/mapper`
+
+Wyświetla ogólną pomoc dotyczącą mappera.
+
+## `/mapper_opcje`
+
+Prezentuje pomoc dotyczącą konfiguracji mappera.
+
+## `/mapper_rys`
+
+Pokazuje pomoc dotyczącą rysowania mapy.
+
+## `/mapper_skroty`
+
+Wyświetla pomoc dla skrótów mappera.
+
+## `/pokaz_kolory`
+
+Prezentuje legendę kolorów używanych przez mappera.
+
+## `/idzdo <ID>`
+
+Rozpoczyna marsz do lokacji o podanym numerze.
+
+## `/idzdo <ID> <opóźnienie>`
+
+Planowo rozpoczyna marsz do lokacji po zadanym czasie.
+
+## `/pij`
+
+Wykonuje komendę picia wody, korzystając z konfiguracji mappera.
+
+## `/cofnij`
+
+Wycofuje ostatni krok automatycznego chodzenia.
+
+## `/sciezka <komendy>`
+
+Definiuje ręczną ścieżkę do wykonania przez mappera.
+
+## `/nastepny_kierunek`
+
+Pokazuje kolejny kierunek w przygotowanej ścieżce.
+
+## `/zaznaczaj`
+
+Przełącza podświetlanie odwiedzanych lokacji na mapie.
+
+## `/idz`
+
+Wykonuje następny krok przygotowanej ścieżki.
+
+## `/prowadz <imie>`
+
+Rozpoczyna prowadzenie wskazanej osoby po mapie.
+
+## `/prowadz-`
+
+Kończy prowadzenie aktualnej osoby.
